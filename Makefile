@@ -38,6 +38,7 @@ super-linter: ## Runs super linter locally
 	rm -rf .mypy_cache
 	podman run -e RUN_LOCAL=true -e USE_FIND_ALGORITHM=true	\
 					-e VALIDATE_BIOME_FORMAT=false \
+					-e 'FILTER_REGEX_EXCLUDE=.*templates/.*\.ya?ml' \
 					-v $(PWD):/tmp/lint:rw,z \
 					-w /tmp/lint \
 					ghcr.io/super-linter/super-linter:slim-v8
