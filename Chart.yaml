@@ -1,6 +1,6 @@
 apiVersion: v2
-description: A Helm chart to serve as the Validated Patterns Template
+description: Helm Chart to configure the hypershift feature
 keywords:
   - pattern
-name: vp-template
+name: hypershift-config
 version: 0.0.1
